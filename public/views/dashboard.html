@@ -1,0 +1,35 @@
+<div class="dashboard-header mb-2">
+    <div>
+        <h2 class="text-primary"><i class="fa-solid fa-chart-line"></i> Dashboard</h2>
+        <p class="text-muted">Welcome to your central hub.</p>
+    </div>
+</div>
+
+<div class="dashboard-grid">
+    <!-- Stat Card -->
+    <div class="card" style="display: flex; align-items: center; gap: 1.5rem;">
+        <div style="background: rgba(139, 92, 246, 0.2); border-radius: 50%; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center;">
+            <i class="fa-solid fa-fire text-primary" style="font-size: 1.8rem;"></i>
+        </div>
+        <div>
+            <h3 style="margin: 0; font-size: 2rem;">1</h3>
+            <span class="text-muted">Day Streak</span>
+        </div>
+    </div>
+    
+    <!-- Stat Card -->
+    <div class="card" style="display: flex; align-items: center; gap: 1.5rem;">
+        <div style="background: rgba(16, 185, 129, 0.2); border-radius: 50%; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center;">
+            <i class="fa-solid fa-check-double text-success" style="font-size: 1.8rem;"></i>
+        </div>
+        <div>
+            <h3 id="topics-completed-count" style="margin: 0; font-size: 2rem;">0</h3>
+            <span class="text-muted">Topics Completed</span>
+        </div>
+    </div>
+</div>
+
+<div id="dashboard-content">
+    <!-- Today's schedule populates here via app.js -->
+    <div class="loader-container"><div class="spinner"></div></div>
+</div>

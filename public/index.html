@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Assistant</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <nav class="navbar" id="navbar" style="display: none;">
+        <div class="logo">
+            <a href="#" data-link="home" style="text-decoration: none; color: inherit;">
+                <i class="fa-solid fa-book-open-reader"></i> LearnOptima
+            </a>
+        </div>
+        <!-- Public Links (Shown when logged out) -->
+        <ul class="nav-links" id="nav-public-links" style="display: none;">
+            <li><a href="#" data-link="home" class="nav-item">Home</a></li>
+            <li><a href="#" data-link="about" class="nav-item">About Us</a></li>
+            <li><a href="#" data-link="contact" class="nav-item">Contact</a></li>
+        </ul>
+        
+        <!-- Private Links (Shown when logged in) -->
+        <ul class="nav-links" id="nav-private-links" style="display: none;">
+            <li><a href="#" data-link="dashboard" class="nav-item"><i class="fa-solid fa-chart-pie"></i> Dashboard</a></li>
+            <li><a href="#" data-link="schedule" class="nav-item"><i class="fa-solid fa-calendar-check"></i> Schedule</a></li>
+            <li><a href="#" data-link="tests" class="nav-item"><i class="fa-solid fa-file-pen"></i> Mock Tests</a></li>
+            <li><a href="#" data-link="profile" class="nav-item"><i class="fa-solid fa-user"></i> Profile</a></li>
+        </ul>
+        
+        <div class="nav-actions">
+            <!-- Show when logged out -->
+            <button id="loginNavBtn" class="btn btn-outline" onclick="app.navigate('login')" style="display: none;"><i class="fa-solid fa-right-to-bracket"></i> Login</button>
+            <!-- Show when logged in -->
+            <button id="logoutBtn" class="btn btn-outline" style="display: none;"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main id="app" class="container">
+        <!-- Views will be injected here -->
+        <div class="loader-container">
+            <div class="spinner"></div>
+        </div>
+    </main>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Scripts -->
+    <script src="/js/api.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>

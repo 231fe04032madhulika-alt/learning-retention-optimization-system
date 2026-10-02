@@ -1,0 +1,38 @@
+<div class="mb-4">
+    <h2 class="text-accent"><i class="fa-solid fa-calendar-alt"></i> Study Schedule</h2>
+    <p class="text-muted">Manage your upcoming generated tasks.</p>
+</div>
+
+<div class="card mb-4" id="upload-syllabus-card">
+    <h3 style="margin-bottom: 15px;"><i class="fa-solid fa-cloud-arrow-up text-primary"></i> Upload Syllabus</h3>
+    <form id="syllabusForm" onsubmit="event.preventDefault(); window.uploadSyllabus();">
+        <div class="form-group mb-3">
+            <label>Subject Name</label>
+            <input type="text" id="syl-subject" class="form-control" placeholder="e.g., Data Structures" required>
+        </div>
+        
+        <div style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 8px; border: 1px solid var(--glass-border); margin-bottom: 15px;">
+            <label style="font-weight: bold; color: var(--accent);"><i class="fa-solid fa-file-text"></i> Option A: Upload File</label>
+            <p class="text-muted" style="font-size: 0.85rem; margin-bottom: 10px;">Select a file containing your topics.</p>
+            <div class="form-group mb-0">
+                <input type="file" id="syl-file" class="form-control" style="background: rgba(0,0,0,0.2);">
+            </div>
+        </div>
+
+        <div style="text-align: center; color: var(--text-muted); margin-bottom: 15px; font-weight: bold;">OR</div>
+
+        <div style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 8px; border: 1px solid var(--glass-border); margin-bottom: 15px;">
+            <label style="font-weight: bold; color: var(--accent);"><i class="fa-solid fa-keyboard"></i> Option B: Paste Text</label>
+            <p class="text-muted" style="font-size: 0.85rem; margin-bottom: 10px;">Manually type or paste your topics here.</p>
+            <div class="form-group mb-0">
+                <textarea id="syl-topics" class="form-control" rows="3" placeholder="e.g., Arrays, Linked Lists, Trees"></textarea>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;"><i class="fa-solid fa-upload"></i> Upload & Generate Schedule</button>
+    </form>
+</div>
+
+<div id="dashboard-content">
+    <div class="loader-container"><div class="spinner"></div></div>
+</div>
